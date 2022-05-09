@@ -1,0 +1,247 @@
+html {
+  padding: 0 8px;
+}
+footer {
+  display: block;
+  margin: 20px;
+  font-size: 10px;
+  text-align: right;
+}
+body {
+  color: gainsboro;
+  background-color: black;
+  font: 16px prime_regular;
+  max-width: 980px;
+  min-width: 536px;
+  margin: 0 auto;
+}
+#nav_menu_bar {
+  display: inline-block;
+  margin-top: 10px;
+}
+.table {
+  display: table;
+  /* Allow the centering to work */
+  margin: 0 auto;
+}
+.nav_menu_bar_tier_2 {
+  position: relative;
+  left: 0px;
+  overflow: hidden;
+  margin-top: 10px;
+  text-align: center;
+}
+.nav_menu_tier_2 {
+  float: left;
+  width: 137px;
+}
+.nav_menu_tier_2_text {
+  width: 80%;
+  margin: 0 auto 10px;
+}
+.menu_item {
+  cursor: pointer;
+}
+.nav_menu {
+  float: left;
+  width: 118.5px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.content_box {
+  position: relative;
+  border: 2px solid #2F9A41;
+  margin-top: 10px;
+  padding: 10px;
+  overflow: hidden;
+  line-height: 1.2;
+}
+.link_underline {
+  position: relative;
+  top: -8px;
+  height: 2px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #2F9A41;
+}
+.logo_subtext {
+  position: relative;
+  left: 50px;
+  font-size: 12px;
+}
+.unformatted {
+  text-decoration: none;
+  color: gainsboro;
+}
+a:link,
+a:visited {
+  color: gainsboro;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: gainsboro;
+}
+a.active,
+a.active a:hover {
+  text-decoration: underline;
+}
+a.inactive {
+  text-decoration: none;
+}
+.content_box a:link,
+.content_box a:visited {
+  text-decoration: underline;
+  color: #808080;
+}
+.blog-nav a:link,
+.blog-nav a:visited {
+  text-decoration: none;
+  color: gainsboro;
+}
+.green_border {
+  border: 2px solid #2F9A41;
+}
+.top_row {
+  position: relative;
+  margin-top: 20px;
+  height: 70px;
+}
+.logo_box {
+  height: 28px;
+  padding: 0 8px;
+  border-left: 2px solid #2F9A41;
+}
+.logo_box:first-child {
+  border-left: none;
+}
+.social_box {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  line-height: 32px;
+  text-align: center;
+  display: flex;
+}
+.sticky_flat_page_link {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 28px;
+  width: 190px;
+  text-align: center;
+}
+.item_spacing {
+  height: 30px;
+}
+.item_image {
+  display: inline-block;
+  padding-top: 1em;
+  text-align: center;
+}
+.item_text {
+  margin-left: 30px;
+  vertical-align: top;
+  display: inline-block;
+}
+#rss-link {
+  position: absolute;
+  right: 0px;
+  padding-right: 10px;
+}
+.addon_fonts_options {
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'prime_regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/static/fonts/prime_regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'prime_light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/static/fonts/prime_light.otf') format('opentype');
+}
+.blog-post-listing-container {
+  text-decoration: none;
+  color: gainsboro;
+  max-width: 100%;
+  border-width: 4px;
+  border-color: #e7ff6e;
+  border-style: solid;
+  margin: 2rem 1rem;
+  padding: 2rem;
+}
+.blog-post-listing-body {
+  border-width: 4px;
+  border-color: #e7ff6e;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+}
+.tag-container {
+  border: 2px solid #2F9A41;
+  width: fit-content;
+  padding: 0.3rem 0.4rem;
+  margin: 0.3rem;
+  font-size: 0.9rem;
+}
+.full-width {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-start {
+  justify-content: start;
+}
+.flex-center {
+  justify-content: center;
+}
+.tree_box {
+  min-width: 300px;
+  position: relative;
+  text-align: center;
+}
+.tech_side_image {
+  min-width: 200px;
+  text-align: center;
+}
+#tree_left_top {
+  position: absolute;
+  top: 136px;
+  left: 50px;
+}
+#tree_left_middle {
+  position: absolute;
+  top: 190px;
+  left: 20px;
+}
+#tree_left_bottom {
+  position: absolute;
+  top: 240px;
+  left: -10px;
+}
+#tree_right_top {
+  position: absolute;
+  top: 136px;
+  left: 210px;
+}
+#tree_right_middle {
+  position: absolute;
+  top: 190px;
+  left: 220px;
+}
+#tree_right_bottom {
+  position: absolute;
+  top: 240px;
+  left: 250px;
+}

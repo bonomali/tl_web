@@ -1,10 +1,9 @@
 @std_green: #2F9A41;
-@logo_green: #2D9A47;
 @std_font: 16px prime_regular;
 @dark_gray: #202020;
 @light_gray: #808080;
 @lightest_gray: #C0C0C0;
-@white: #F5F5F5;  // Actuall gray99
+@white: gainsboro;
 @default_line_height: 40px;
 @logo_box_height: 28px;
 @grid_width: 980px; // <body> has 8px margin on both sides, effective 964px width
@@ -12,163 +11,150 @@
 @med_width: 740px;
 @grid_min: 536px;
 @border_width: 2px;
-@nav_tabs: 7;
+@nav_tabs: 8;
 
-.art-bar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px 0;
+html {
+  padding: 0 8px;
 }
-.symbol {
-  font-size: 24px;
-  line-height: initial;
+footer {
+  display: block;
+  margin: 20px;
+  font-size: 10px;
+  text-align: right;
 }
-.content_col {
+body {
+  color: @white;
+  background-color: black;
+  font: @std_font;
+  max-width: @grid_width;
+  min-width: @grid_min;
+  margin: 0 auto;
+}
+#nav_menu_bar {
   display: inline-block;
-  vertical-align: top;
-  width: 440px;
-  padding: 10px;
-  min-height: 300px;
-}
-.content_col_left {
-  .content_col;
-  border-right: 1px solid @std_green;
-}
-.content_col_right {
-  .content_col;
   margin-top: 10px;
 }
-.row {
+.table {
+  display: table;   /* Allow the centering to work */
+  margin: 0 auto;
+}
+.nav_menu_bar_tier_2 {
   position: relative;
-}
-.row_32 {
-  position: relative;
-  height: 32px;
-}
-.row_border {
-  line-height: 30px;
-  border-bottom: 1px solid @std_green;
-}
-.contact_info {
-  position: absolute;
-  top: 0px;
-  left: 100px;
-  line-height: 30px;
-}
-#gallery {
   left: 0px;
-  width: @main_width;
-}
-#slides {
-  height: 310px;
-}
-.blog_navigation {
-  position: relative;
-  height: 40px;
-  width: 100%;
-}
-.client_slide {
-  float: left;
+  overflow: hidden;
+  margin-top: 10px;
   text-align: center;
-  width: 100%;
-  display: none;
 }
-.client_image {
-  top: 0px;
-  display: inline-block;
-  vertical-align: middle;
+.nav_menu_tier_2 {
+  float: left;
+  width: 137px; //TODO - calculate this
 }
-.client_text_box {
-  width: @med_width;
-  margin: 20px;
-  display: inline-block;
+.nav_menu_tier_2_text {
+  width: 80%;
+  margin: 0 auto 10px;
 }
-.client_underline {
-  display: none;
+.menu_item {
+  cursor: pointer;
+}
+.nav_menu {
+  float: left;
+  width: ((@grid_width - 2* @border_width * @nav_tabs) / @nav_tabs);
+  height: 40px;
+  text-align:center;
+  line-height: @default_line_height;
+}
+.content_box {
+  position: relative;
+  border: @border_width solid @std_green;
+  margin-top: 10px;
+  padding: 10px;
+  overflow: hidden;
+  line-height: 1.2;
+}
+.link_underline {
   position: relative;
   top: -8px;
   height: @border_width;
+  width: 80%;
   margin: 0 auto;
   background-color: @std_green;
 }
-a img {
-  border:none;
-}
-.competitor-boxes {
+.logo_subtext {
   position: relative;
+  left: 50px;
+  font-size: 12px;
+}
+.unformatted {
+  text-decoration: none;
+  color: @white;
+}
+a:link, a:visited {
+  color: @white;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: @white;
+}
+a.active, a.active a:hover {
+  text-decoration: underline;
+}
+a.inactive {
+   text-decoration: none;
+}
+.content_box a:link, .content_box a:visited {
+  text-decoration: underline;
+  color: @light_gray;
+}
+.blog-nav a:link, .blog-nav a:visited {
+  .unformatted;
+}
+.green_border {
+  border: @border_width solid @std_green;
+}
+.top_row {
+  position: relative;
+  margin-top: 20px;
+  height: 70px;
+}
+.logo_box {
+  height: @logo_box_height;
+  padding: 0 8px;
+  border-left: @border_width solid @std_green;
+}
+.logo_box:first-child {
+  border-left: none;
+}
+.social_box {
+  position: absolute;
+  right: 0px;
   top: 0px;
-  left: 98px;
-  width: @med_width;
-}
-.competitor-box {
-  float: left;
-  width: (@med_width / 5 - 2 * @border_width);
-  height: 50px;
-}
-.competitor {
+  line-height: 32px;
   text-align: center;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  margin: 0 5px;
-}
-.competitor-boxes a:link, .competitor-boxes a:visited {
-  text-decoration: none;
-  color: @lightest_gray;
-}
-.slideshow_menu {
-  width: @main_width;
-  text-align: center;
-}
-.slideshow_menu ul {
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-}
-.slideshow_menu li {
-  display: inline-block;
-  padding: 0 10px;
-  list-style: none;
-  height: 40px;
-  overflow: hidden;
-  min-width: 70px;
-  line-height: @default_line_height;
-}
-.slideshow_menu li a {
-  display: block;
-  height: 50px;
-  padding-top: 0px;
-  color: #060;
-  text-decoration: none;
-}
-#testimonial_link {
-  margin: 0 auto;
-  width: 200px;
-  text-align: center;
-  display: block;
-  padding-bottom: 15px;
-  line-height: 1.2;
-  font-size: 20px;
-}
-.hide {
-  display: none;
-}
-.flex {
   display: flex;
-  justify-content: center;
 }
-.flex-ends {
-  width: 150px;
-}
-.careers {
+.sticky_flat_page_link {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 28px;
+  width: 190px;
   text-align: center;
 }
-.left {
-  margin-right: auto;
+.item_spacing {
+  height: 30px;
 }
-.right {
-  margin-left: auto;
+.item_image {
+  display: inline-block;
+  padding-top: 1em;
+  text-align: center;
+}
+.item_text {
+  margin-left: 30px;
+  vertical-align: top;
+  display: inline-block;
+}
+#rss-link {
+  position: absolute;
+  right: 0px;
+  padding-right: 10px;
 }
