@@ -149,7 +149,9 @@ a img {
 .hide {
   display: none;
 }
-
+.flex {
+  display: flex;
+}
 .flex-ends {
   width: 150px;
 }
@@ -528,7 +530,4 @@ body.lb-disable-scrolling {
 }
 .partner-content-header img {
   margin-right: 100px;
-}
-.margin-15 {
-  margin: 15px;
 }
